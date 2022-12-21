@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            background-color: #f2c80c;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            height:80px;
+            width:100%;
+            background-color: #f28b0c;
+            color:white;
+        }
+        nav ul li{
+            padding: 15px;
+            margin: 15px;
+        }
+        nav ul a{
+            padding: 10px;
+            margin: 10px;
+        }
+        .libimg{
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+        }
+        .libimg img{
+            width:120px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="libimg"><img src="https://www.aspscriptsonline.com/wp-content/uploads/2017/12/Library-Management-Source-Code.jpg" alt="Library logo">Library Management System</li>
+            <a href="viewbooks/" class="Home">View Books</a>
+            <a href="reservebooks/" class="ViewBooks">Reserve Books</a>
+            <a href="cancelreservations/" class="CancelRes">Cancel Reservations</a>
+            <a href="viewreservations/" class="ViewRes">View Reservations</a>
+        </ul>
+    </nav>
+    <div class="h-screen flex justify-center items-center">
+        <div class="grid grid-cols-2 gap-10 text-lg text-white">
+            <a href="viewbooks/" class="bg-blue-500 rounded-lg px-5 py-3 text-center shadow-lg hover:bg-blue-600">View Books</a>
+            <a href="reservebooks/" class="bg-blue-500 rounded-lg px-5 py-3 text-center shadow-lg hover:bg-blue-600">Reserve Books</a>
+            <a href="cancelreservations/" class="bg-blue-500 rounded-lg px-5 py-3 text-center shadow-lg hover:bg-blue-600">Cancel Books</a>
+            <a href="viewreservations/" class="bg-blue-500 rounded-lg px-5 py-3 text-center shadow-lg hover:bg-blue-600">View Reservations</a>
+        </div>
+    </div>
+</body>
+</html>

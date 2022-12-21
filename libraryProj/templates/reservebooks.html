@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            background-color: #f2c80c;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            height:80px;
+            width:100%;
+            background-color: #f28b0c;
+            color:white;
+        }
+        nav ul li{
+            padding: 15px;
+            margin: 15px;
+        }
+        nav ul a{
+            padding: 15px;
+            margin: 15px;
+        }
+        .libimg{
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+        }
+        .libimg img{
+            width:120px;
+            padding: 5px;
+            margin: 5px;
+        }
+        .element{
+            align-items: center;
+            padding: 15px;
+            margin: 15px;
+        }
+        .element input{
+            margin: 5px;
+            padding: 5px;
+            border-radius: 2px;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="libimg"><img src="https://www.aspscriptsonline.com/wp-content/uploads/2017/12/Library-Management-Source-Code.jpg" alt="Library logo">Library Management System</li>
+            <a href="viewbooks/" class="Home">View Books</a>
+            <a href="reservebooks/" class="ViewBooks">Reserve Books</a>
+            <a href="cancelreservations/" class="CancelRes">Cancel Reservations</a>
+            <a href="viewreservations/" class="ViewRes">View Reservations</a>
+        </ul>
+    </nav>
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="element">
+                <label for="book_isbn">Enter book ISBN: </label>
+                <input type="text" name="book_isbn" id="book_isbn" placeholder="Enter book isbn">
+            </div>
+            <div class="element">
+                <label for="user_email">Enter guest user email: </label>
+                <input type="email" name="user_email" id="user_email" placeholder="Enter your email">
+            </div>
+            <div class="element">
+                <label for="phono">Enter phone number: </label>
+                <input type="number" name="phono" id="phono" placeholder="Enter phone no.">
+            </div>
+            <div class="element">
+                <label for="user_name">Enter guest user name: </label>
+                <input type="text" name="user_name" id="user_name" placeholder="Enter user name">
+            </div>
+            <button class="bg-green-500 rounded-lg px-5 py-3 text-center shadow-lg hover:bg-blue-600" type="submit">Reserve</button>
+        </form>
+    </div>
+</body>
+</html>
